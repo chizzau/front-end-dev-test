@@ -1,7 +1,7 @@
 #BoomTown Front-End Developer Test
 
-#Candidate Name: Chau Nguyen
-#Project Started: November 17th 2014 4:28PM
+##Candidate Name: Chau Nguyen
+##Project Started: November 17th 2014 4:28PM
 
 ## Task
 The design team just put their finishing touches on the new "BoomTown Dashboard" interface. Now it's your turn. You are tasked with building the dashboard in a responsive / adaptive, "mobile first" fashion.
