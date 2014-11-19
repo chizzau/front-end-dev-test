@@ -1,0 +1,65 @@
+@import 'variables.less';
+
+body {
+	background: @mainbg;
+
+	h2 {
+		color: red;
+	}
+
+	h1 {
+		font-weight: bold;
+		color: @mainbg;
+		font-size: 30px;
+	}
+}
+
+nav {
+
+	.uk-navbar-toggle {
+		color:white;
+		height: @navbar-height;
+		font-size: @navbar-fontsize;
+		padding: 0px 20px;
+		font-weight: 100;
+
+	}
+
+	.uk-navbar-brand { 
+		padding-left: 0px; 
+		color:white;
+		height: @navbar-height;
+		font-size: @navbar-fontsize;
+		font-weight: 100;
+		letter-spacing: 2px;
+	}
+
+	z-index: 9999;
+	position: fixed;
+	width: 100%;
+	left:0px;
+	top:0px;
+}
+
+.uk-navbar {
+	background-color: @navbar-bg;
+	color: white;
+	height: @navbar-height;
+}
+
+	.uk-offcanvas-bar { 
+		background-color: @navpanel-bg;	
+	}
+
+.rounded (@radius:5px) {
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-ms-border-radius:@radius;
+	-o-border-radius:@radius;
+	border-radius:@radius;
+}
+
+
+
+
+

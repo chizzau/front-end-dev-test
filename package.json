@@ -1,0 +1,29 @@
+{
+  "name": "fedt",
+  "version": "1.0.1",
+  "description": "BoomTown Dashboard Interface",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-less": "^0.12.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/envylife/front-end-dev-test.git"
+  },
+  "author": "Chau Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/envylife/front-end-dev-test/issues"
+  },
+  "homepage": "https://github.com/envylife/front-end-dev-test"
+}

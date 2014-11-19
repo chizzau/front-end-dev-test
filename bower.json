@@ -1,0 +1,20 @@
+{
+  "name": "BoomTown! Dashboard Interface",
+  "version": "0.1.0",
+  "homepage": "https://github.com/envylife/front-end-dev-test",
+  "authors": [
+    "envylife <chau@envylife.in>"
+  ],
+  "description": "BoomTown Front-End Dev Test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
