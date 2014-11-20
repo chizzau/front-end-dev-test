@@ -1,10 +1,14 @@
+
 @import 'variables.less';
 
 body {
 	background: @mainbg;
 
 	h2 {
-		color: red;
+		color: #212121;
+		font-size:18px;
+		font-weight: 400;
+		letter-spacing: 1px;
 	}
 
 	h1 {
@@ -12,6 +16,52 @@ body {
 		color: @mainbg;
 		font-size: 30px;
 	}
+
+	#dash-wrapper {
+		max-width:1500px;
+		margin: 0 auto;
+	}
+
+	#hero-dash {
+		margin-top: 100px;
+		margin-bottom: 50px;
+		padding-left: 0px;
+		height: 496px;
+		width:100%;
+		max-width: 1500px;
+		background-image: url('../../assets/images/hero.jpg');
+		background-repeat: no-repeat;
+		
+		background-position: 50% 80%;
+
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+
+		position: relative;
+
+		#dashboard-header { 
+			.dashboard-title(25px, 100px); 
+			position: relative;
+			z-index: 100;
+		}
+
+		.rounded;
+		.box-shadow(3px);
+	}
+
+	/*overrides UIKit*/
+	@media (min-width: 1220px) {
+		.uk-grid:not(.uk-grid-preserve)>* {
+			padding-left: 0px;
+		}
+	}
+
+	section { 
+		padding: 0px; 
+	}
+
 }
 
 nav {
@@ -73,6 +123,124 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 		padding-top:70px;	
 	}
 
+
+#dashboard-container {
+	position:relative;
+}
+
+#dashboard-header-bg {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99; /* under the title */
+
+	filter: blur(5px);
+  	-webkit-filter: blur(5px);
+  	-moz-filter: blur(5px);
+
+  	background-image: url('../../assets/images/hero-blur.jpg');
+
+	background-repeat: no-repeat;
+		
+	background-position: 50% 50%;
+	background-size: cover;
+
+	filter:alpha(opacity=80); /* IE */
+    -moz-opacity:0.8; /* Mozilla */
+    opacity: 0.8; /* CSS3 */
+    
+
+}
+
+.dashboard-title(@pad-tb:20px, @pad-rl:50px) {
+	border: 1px solid white;
+	padding: @pad-tb @pad-rl;
+	/*background: rgba(100,100,100,0.35);*/
+
+	z-index: 100;
+
+	position: relative;
+	h1 { 
+		font-weight: 100; 
+		margin-bottom: 0px; 
+		font-size: 44px; 
+		letter-spacing: 2px;
+	}
+}
+
+#profiles {
+	.profile-container {
+		width: 340px;
+		height: 400px;
+		
+		.box-shadow;
+
+	}
+
+	.profile-cover img {
+		width: 100%; /*same as width of profile container*/
+		height:138px;
+		&:extend(.rounded-top);
+		
+ 	}
+
+ 	.profile-avatar {
+ 		position: relative;
+ 		top: -86px;
+ 		max-width: @profile-avatar-diameter;
+ 		max-height: @profile-avatar-diameter;
+ 		border: 2px solid #c9d1d1;
+
+ 		.circle;
+ 	}
+
+ 	.profile-body {
+ 		background: white;
+ 		padding:0 25px;
+ 		height:216px;
+ 		text-align: center;
+ 		
+ 		h2 { .xtend-pos; } 
+ 		span { 
+ 			.xtend-pos(115px); 
+ 			color:@navbar-bg;
+ 			font-weight: 500; 
+ 			letter-spacing: 1px;
+ 		}
+ 		p { 
+ 			.xtend-pos(115px); 
+ 			color: #8f8f8f;
+ 			font-size: 13px;
+ 			font-weight: 200;
+ 		}
+
+ 	}
+
+ 	.profile-footer {
+ 		background-color: @profile-footer-bg;
+ 		width: 100%;
+ 		height:51px;
+ 		&:extend(.rounded-bottom);
+ 	}
+
+ 	.profile-inbetween { margin:0 50px; }
+ 	.xtend-pos (@position:100px) { position:relative; top:-(@position);}
+
+}
+
+.rounded-top {
+	border-top-left-radius: @radius;
+	border-top-right-radius: @radius;
+}
+
+.rounded-bottom {
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+
 .rounded (@radius:5px) {
 	-webkit-border-radius:@radius;
 	-moz-border-radius:@radius;
@@ -81,7 +249,15 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 	border-radius:@radius;
 }
 
+.box-shadow (@drop:8px) {
+	box-shadow: 0px @drop 5px rgba(0,0,0,.2);
+}
 
+.circle(@c-radius:63px) {
+	-webkit-border-radius: @c-radius;
+    -moz-border-radius: @c-radius;
+    border-radius: @c-radius;
+}
 
-
+footer { height:300px; }
 
