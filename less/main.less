@@ -62,6 +62,8 @@ body {
 		padding: 0px; 
 	}
 
+	
+
 }
 
 nav {
@@ -225,9 +227,121 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
  		&:extend(.rounded-bottom);
  	}
 
+
  	.profile-inbetween { margin:0 50px; }
  	.xtend-pos (@position:100px) { position:relative; top:-(@position);}
 
+}
+
+#weather {
+	height: 200px;
+	background-color: white;
+	.rounded;
+	.box-shadow(3px);
+
+	.ldl { border-left:solid 1px #DDD;}
+
+	.weather-curr { background-color: @navbar-bg; 
+		.rounded-left;
+		img { height: 120px; }
+	}
+
+	.weather-curr-temp { 
+		color: black;
+		h1 { 
+			margin-top: 25px;
+			margin-left: -25%;
+			line-height: 25px;
+			font-size: 48px;
+			color:black; 
+			font-weight: 400;
+			span { 
+				font-size: 18px; 
+				font-weight: 200;
+				letter-spacing: 1px;
+			}
+		}
+	}
+
+	.weather-forecast {
+		text-align: center;
+		padding: 25px 0;
+		span { color: @navbar-bg;}
+		img { height: 65px; margin: 10px 0;}
+
+		color: @bodytext; 
+	}
+
+}
+
+
+
+
+#activities-side {
+	section { padding: 0 20px; }
+	float:right;
+	background-color: white;
+	max-width: 330px;
+	padding: 10px 0px;
+
+	.rounded;
+	.box-shadow(3px);
+
+	h2 { margin-top: 0px;}
+	h4 { margin-bottom: 0px;}
+	hr { width: 330px; }
+	p { 
+		font-size: 13px; 
+		margin-top: 5px;
+	}
+
+	.activities-counter { 
+		float:right;
+		color: @sb-notifi;
+		font-size: smaller;
+		letter-spacing: 2px;
+		margin-top: 10px;
+	}
+
+	button { 
+		margin: 0 20px; 
+		width: 100%; max-width: 290px; 
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 9px; /* based on the psd */
+		height:32px;
+
+		.rounded;
+	}
+
+	.activities-info { .activities-counter; }
+
+	.all-activities-num { 
+		padding:3px 5px;
+		background-color: white;
+		color:orange;
+		float:right;
+		
+		height: 14px;
+		margin-top: 5px;
+		vertical-align: top;
+		p { 
+			margin-top: -8px; 
+			font-size: smaller;
+			font-weight: bold;
+		}
+
+		.rounded;
+	}
+}
+
+
+
+
+
+.rounded-left {
+	border-top-left-radius: @radius;
+	border-bottom-left-radius: @radius;
 }
 
 .rounded-top {
@@ -258,6 +372,14 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
     -moz-border-radius: @c-radius;
     border-radius: @c-radius;
 }
+
+/* override .uk-grid */
+
+.uk-grid { margin:0;}
+@media (min-width: 1220px) {
+	.uk-grid:not(.uk-grid-preserve)  { margin-left: 0px;}
+}
+
 
 footer { height:300px; }
 
