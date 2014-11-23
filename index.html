@@ -77,7 +77,14 @@
                             <h2>Zach Schnackel</h2>
                             <span>Mr. White</span>
                             <p>Proin et pretium mi. Fusce pharetra auctor dui, nec bibendum ligula tempor in. Pellentesque consectetur viverra ultrices.</p></div>
-                        <div class="profile-footer"></div>
+                        
+                        <div class="profile-footer">
+
+                            <img src="assets/icons/facebook.svg">
+                            <img src="assets/icons/twitter.svg" class="sout">
+                            <img src="assets/icons/github.svg">
+
+                        </div>
 
                     </div>
                         
@@ -90,7 +97,11 @@
                             <h2>Sean McCambridge</h2>
                             <span>Mr. Pink</span>
                             <p>Morbi porttitor, augue in pellentesque conse-quat, ex felis interdum justo, eget finibus urna ante et auge. Donec eget velit magna.</p></div>
-                        <div class="profile-footer"></div>
+                        <div class="profile-footer">
+                            <img src="assets/icons/facebook.svg">
+                            <img src="assets/icons/twitter.svg" class="sout">
+                            <img src="assets/icons/github.svg">
+                        </div>
 
                     </div>
 
@@ -102,7 +113,11 @@
                             <h2>Craig Anthony</h2>
                             <span>Mr. Blue</span>
                             <p>Nullam eleifend, quam vel fringilla sollicitudin, dui felis tristique lorem, vitae laoreet arcu. Fusce dolor purus, adipiscing a tempus.</p></div>
-                        <div class="profile-footer"></div>
+                        <div class="profile-footer">
+                            <img src="assets/icons/facebook.svg">
+                            <img src="assets/icons/twitter.svg" class="sout">
+                            <img src="assets/icons/github.svg">
+                        </div>
 
                     </div>
 
@@ -115,7 +130,7 @@
                 <section id="weather" class="uk-flex" >
                 
                     <div class="uk-flex uk-width-1-5 weather-curr uk-flex-middle uk-flex-center">    
-                        <img src="assets/icons/sun-white.png">
+                        <img src="assets/icons/sun.svg">
 
                     </div>
                         
@@ -155,8 +170,58 @@
                 <BR clear="all">
                     <hr style="height:5px;border:0px;">
 
+                <section class="uk-flex team-chat-header">
+                    <div class="uk-width-1-2"> 
+                        <h2>Team Chat Messages</h2> 
+                    </div>
+                    <div class="uk-width-1-2"> 
+                        <span class="view-chat-message-notif">
+                            <img src="assets/icons/email.svg">
+                            view all messages</span>
+                    </div>
 
+                </section>
 
+                <section id="team-chat" class="uk-flex" >
+                    
+
+                    <div class="uk-width-3-5 chat-box">   
+                         
+                        <div class="chat-to">
+                            <img class="chat-avatar" src="assets/images/zach.jpg">
+                            <div class="chat-to-message">
+                                Suspendisse potenti. Morbi ultrices, tellus eu volutpat lobor-tis, enim eros imperdiet nulla.
+                            </div>
+                        </div>
+
+                        <div class="chat-from">
+                            <img class="chat-avatar" src="assets/images/sean.jpg">
+                            <div class="chat-to-message">
+                                Vivamus congue mauris eu tincidunt iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec pretium iaculis fringilla. 
+                            </div>
+                        </div>
+
+                        <div class="chat-to">
+                            <img class="chat-avatar" src="assets/images/zach.jpg">
+                            <div class="chat-to-message">
+                                Proin ut nisl cursus, auctor nibh eu, convallis nisl
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                        
+
+                    <div class="uk-width-2-5 ldl chat-input">
+                        <textarea>compose message
+                        </textarea>
+                        
+                        <button class="uk-button" type="button" data-uk-button>
+                             send message 
+                        </button>
+                    </div>
+
+                </section>
 
 
 
@@ -168,41 +233,59 @@
 
 
             </div>
+
+
+
+
             
-            <div id="activities-side" class="uk-width-1-4">
+            <div class="uk-width-1-4">
+
+                <div id="activities-side">
                 <section>
 
                 <span class="activities-counter"> 4 / 14 </span>
                 <h2>Latest Activities</h2>
                 
-                    <span class="activities-info"> 10m </span>
-                    <h4> NEW EMAIL </h4>
-                    <p> Lorem ispum dolor sit ac sceleri... </p>
+                    <div id="la-email-container">
+                        <div class="svg-c"><img src="assets/icons/email-red.svg"></div>
+                        <span class="activities-info"> 10m </span>
+                        <h4> NEW EMAIL </h4>
+                        <p> Lorem ispum dolor sit ac sceleri... </p>
+                    </div>
 
                 </section>
 
                 <hr>
 
                 <section>
-                    <span class="activities-info"> 1h </span>
-                    <h4> NEW TEXT </h4>
-                    <p> Lorem ispum dolor </p>
+                    <div id="la-text-container">
+                        <div class="svg-c"><img src="assets/icons/sms.svg"></div>
+                        <span class="activities-info"> 1h </span>
+                        <h4> NEW TEXT </h4>
+                        <p> Lorem ispum dolor </p>
+                    </div>
                 </section>
 
                 <hr>
 
                 <section>
-                    <span class="activities-info"> 8h </span>
-                    <h4> NEW CALL </h4>
-                    <p> Nut hendrerit lacus libero a nunc. </p>
+                    <div id="la-phone-container">
+                        <div class="svg-c"><img src="assets/icons/phone.svg"></div>
+                        <span class="activities-info"> 8h </span>
+                        <h4> NEW CALL </h4>
+                        <p> Nut hendrerit lacus libero a nunc. </p>
+                    </div>
                 </section>
 
                 <hr>
 
                 <section>
-                    <span class="activities-info"> 1d </span>
-                    <h4> MEETING SCHEDULED </h4>
-                    <p> <i>On 10/12/2015 09:00 am</i> </p>
+                    <div id="la-meeting-container">
+                        <div class="svg-c"><img src="assets/icons/users.svg"></div>
+                        <span class="activities-info"> 1d </span>
+                        <h4> MEETING SCHEDULED </h4>
+                        <p> <i>On 10/12/2015 09:00 am</i> </p>
+                    </div>
                 </section>
 
                 <hr>
@@ -211,9 +294,95 @@
                     <div class="all-activities-num"><p>14</p></div>
                     view all activities 
                 </button>
+                </div> <!-- ends activities -->
+
+
+
+                <div id="activities-side">
+                <section id="settings">
+
+                <h2>My Settings</h2>
+                    
+                    
+                <div class="setting-blocks">
+                    <label class="switch switch-green fright">
+                        <input type="checkbox" class="switch-input" checked>
+                        <span class="switch-label" data-on-"on" data-off="off"></span>
+                        <span class="switch-handle"><span>
+                    </label>
+
+                    Show my social feed
+                </div>
+
+                <div class="setting-blocks">
+                    <label class="switch switch-green fright">
+                        <input type="checkbox" class="switch-input">
+                        <span class="switch-label" data-on-"on" data-off="off"></span>
+                        <span class="switch-handle"><span>
+                    </label>
+
+                    Turn on incognito mode
+                </div>
+
+                <div class="setting-blocks">
+                    <label class="switch switch-green fright">
+                        <input type="checkbox" class="switch-input">
+                        <span class="switch-label" data-on-"on" data-off="off"></span>
+                        <span class="switch-handle"><span>
+                    </label>
+                    Receive automated alerts
+                </div>
+
+                <div class="setting-blocks">
+                    <label class="switch switch-green fright">
+                        <input type="checkbox" class="switch-input" checked>
+                        <span class="switch-label" data-on-"on" data-off="off"></span>
+                        <span class="switch-handle"><span>
+                    </label>
+                    Turn on location settings <BR>
+                </div>
+
+                <hr>
+
+                    My favorite colors (check all that apply)
+
+                    <form class="uk-form uk-margin">
+
+                    <div class="uk-grid">
+                        <div class="uk-width-1-2">
+                            <input type="checkbox" checked> red </input><BR>
+                            <input type="checkbox"> blue </input><BR>
+                            <input type="checkbox"> yellow </input>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <input type="checkbox"> green </input><BR>
+                            <input type="checkbox" checked> orange </input><BR>
+                            <input type="checkbox" checked> pink </input>
+                        </div>
+                    </div>
+                    </form>
+
+
+                <hr>
                 
-                
-                
+                    Do you like Miley Cyrus?
+
+                    <div class="uk-form uk-margin">
+                        <input type="radio" id="radio1" name="miley">
+                        <label for="radio1"> yes </label>
+
+                        <input type="radio" name="miley" checked> no </input>
+                    </div>
+
+                </section>
+               
+                </div> <!-- ends settings -->
+
+
+
+
+
+                         
             </div>
 
             </div> <!-- //-->
