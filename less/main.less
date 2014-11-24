@@ -519,9 +519,40 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
   transition-property: opacity background;
 }
 
-.switch-label:before {
-
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
 }
+.switch-label::before {
+  content: attr(data-off);
+  right: 11px;
+  color: white;
+  /*text-shadow: 0 1px rgba(255, 255, 255, 0.5);*/
+}
+.switch-label::after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  /*text-shadow: 0 1px rgba(0, 0, 0, 0.2);*/
+  opacity: 0;
+}
+/*.switch-input:checked ~ .switch-label {
+  background: #47a8d8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label::before {
+  opacity: 0;
+}
+.switch-input:checked ~ .switch-label::after {
+  opacity: 1;
+}*/
+
 
 .switch-handle {
   position: absolute;
@@ -541,7 +572,7 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out;
 }
-.switch-handle:before {
+.switch-handle::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -577,7 +608,7 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 
 
 .setting-blocks { display:inline-block; width: 100%; 
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 .fright { float: right; }
@@ -626,3 +657,4 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 
 footer { height:300px; }
 
+@import 'mediaqueries.less';
