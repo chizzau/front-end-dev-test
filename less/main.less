@@ -91,6 +91,8 @@ nav {
 	width: 100%;
 	left:0px; 
 	top:0px;
+
+	.box-shadow(3px);
 }
 
 .nav-hover {
@@ -346,9 +348,11 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 	}
 
 	.chat-input {
+		overflow:hidden;
+
 		textarea { 
 			height: 200px - 44px;
-			width: 100%;
+			width: 90%;
 			margin:22px;
 			margin-bottom: 15px;
 			max-width: 400px - 44px;
@@ -605,7 +609,12 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 
 
 
-
+.transition(@transtime:0.5s) {
+	-webkit-transition: all @transtime ease-in-out;
+  	-moz-transition: all @transtime ease-in-out;
+  	-o-transition: all @transtime ease-in-out;
+  	transition: all @transtime ease-in-out;
+}
 
 .setting-blocks { display:inline-block; width: 100%; 
 	margin-bottom: 0px;
@@ -654,7 +663,13 @@ html:not(.uk-touch) .uk-nav-offcanvas>li>a:hover {
 	.uk-grid:not(.uk-grid-preserve)  { margin-left: 0px;}
 }
 
+.uk-grid>* { padding-left: 0px; }
+
 
 footer { height:300px; }
+
+
+
+
 
 @import 'mediaqueries.less';
